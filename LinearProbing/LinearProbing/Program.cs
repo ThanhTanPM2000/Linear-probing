@@ -80,7 +80,8 @@ namespace LinearProbing
             {
                 sum += arrChars[i] + (i + 1);
             }
-            return sum % 46104728;
+            int hashcode = sum.GetHashCode();
+            return (hashcode % size);
         }
         #endregion
 
