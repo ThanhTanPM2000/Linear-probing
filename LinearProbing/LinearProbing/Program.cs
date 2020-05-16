@@ -180,6 +180,21 @@ namespace LinearProbing
             array = new Info[size];
             count = 0;
         }
-        #endregion    
+        #endregion
+
+        public void printHash()
+        {
+            Info[] temp = array;
+
+            Console.WriteLine("HashTable Hiện Tại:");
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (temp[i] != null)
+                {
+                    Console.WriteLine("key = " + temp[i].Key + ", val = " + temp[i].Value);
+                }
+            }
+            Console.WriteLine();
+        }
     }
 }
